@@ -190,7 +190,7 @@ def _mch_task(game, dir, mk):
     state = random.getstate()
     random.setstate(state)
     pid = random.getrandbits(15)
-    while os.path.exists(dir + 'args_' + str(pid) + '.npy'):
+    while os.path.exists(dir + 'utility_' + str(pid) + '.npy'):
         pid = random.getrandbits(15)
 
     np.save(dir + 'utility_' + str(pid) + '.npy', utility)
